@@ -39,11 +39,10 @@
     </div>
   </div>
 
-  <!-- Supabase JS -->
-  <script type="module">
-    import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm';
-
-    const supabase = createClient(
+  <!-- Supabase JS (UMD version for browser) -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+  <script>
+    const supabase = supabase.createClient(
       'https://kiefmcjhsdmgfnqfttnw.supabase.co',
       'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImtpZWZtY2poc2RtZ2ZucWZ0dG53Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDQ5NTQ4MTYsImV4cCI6MjA2MDUzMDgxNn0.DWR-ZKWzqcCWR8MPFnVRnO3YhiTZr_pwJMQaJaEgRZ4'
     );
